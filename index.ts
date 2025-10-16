@@ -16,6 +16,8 @@ import astronomyEventsRoutes from './routes/astronomyEvents.routes';
 import stargazingSpotRoutes from './routes/stargazingSpot.routes';
 import sessionsRoutes from './routes/sessions.routes';
 import pollRoutes from './routes/poll.routes';
+import notificationRoutes from './routes/notification.routes';
+import mentorRequestRoutes from './routes/mentorRequest.routes';
 
 // index.ts
 import express from "express";
@@ -122,6 +124,9 @@ app.use("/api/upload", uploadRoutes);
 app.use("/api/media", mediaUploadRoutes);
 app.use("/api/tours", tourMediaRoutes);
 app.use("/api/events", eventRoutes);
+
+// Mentor Requests (mentee -> mentor requests)
+app.use('/api/mentor-requests', mentorRequestRoutes);
 
 // Notifications API
 app.use("/api/notifications", notificationRoutes);
